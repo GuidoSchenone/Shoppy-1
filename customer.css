@@ -1,0 +1,250 @@
+/* ====== customer.css | Estilo adaptado a Vithalia.store ====== */
+
+.customer:not(.account):not(.order) {
+  margin: 0 auto;
+  max-width: 420px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .customer:not(.account):not(.order) {
+    max-width: 480px;
+  }
+}
+
+.customer > h1,
+.customer__title {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.customer form {
+  margin-top: 2rem;
+}
+
+.customer .field {
+  margin: 1rem 0 0 0;
+}
+
+.customer .field:first-of-type {
+  margin-top: 0;
+}
+
+.customer input[type="email"],
+.customer input[type="password"],
+.customer input[type="text"] {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.customer input[type="email"]:focus,
+.customer input[type="password"]:focus,
+.customer input[type="text"]:focus {
+  border-color: #111;
+  outline: none;
+}
+
+.customer button {
+  margin: 2rem 0 1rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.customer button:hover {
+  background: #333;
+}
+
+.customer ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.customer ul a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.customer strong {
+  font-weight: 600;
+  color: #111;
+}
+
+.customer h2.form__message {
+  font-size: 1.1rem;
+  color: #d9534f;
+  margin-bottom: 1rem;
+}
+
+/* Tablas */
+.customer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.customer thead {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.customer th,
+.customer td {
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.customer th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.customer tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.customer tfoot tr:last-of-type {
+  font-weight: 600;
+}
+
+/* Mobile overrides */
+@media screen and (max-width: 749px) {
+  .customer thead,
+  .customer th {
+    display: none;
+  }
+
+  .customer td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    text-align: right;
+  }
+
+  .customer td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+}
+
+/* Paginación */
+.customer .pagination {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.customer .pagination ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.customer .pagination li {
+  display: inline-flex;
+}
+
+.customer .pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 0.9rem;
+  color: #111;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.customer .pagination a:hover {
+  background-color: #f5f5f5;
+}
+
+.customer .pagination [aria-current] {
+  background-color: #111;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Login */
+.login a {
+  display: block;
+  margin: 1rem auto 0;
+  width: fit-content;
+  color: #111;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.login .field + a {
+  margin-top: 0.5rem;
+}
+
+#recover:target {
+  display: block;
+}
+
+#recover:target ~ #login {
+  display: none;
+}
+
+/* Addresses */
+.addresses form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.addresses form > div {
+  width: 100%;
+}
+
+.addresses input[type="text"],
+.addresses input[type="email"],
+.addresses select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.addresses button {
+  margin-top: 1rem;
+}
+
+/* ====== Responsive ====== */
+@media screen and (min-width: 750px) {
+  .addresses form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .addresses form > div:nth-of-type(1),
+  .addresses form > div:nth-of-type(2) {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}

@@ -1,0 +1,150 @@
+/* ===========================================================
+   Article Card adaptado al estilo Vithalia
+   Tarjetas de contenido limpias, modernas y apiladas
+   =========================================================== */
+
+.articles-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(var(--color-base-background-1));
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(var(--color-base-text), 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(var(--color-base-text), 0.12);
+}
+
+.article-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.article-card__image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.article-card__content {
+  padding: 1.5rem;
+}
+
+.article-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.article-card__title a {
+  text-decoration: none;
+  color: rgb(var(--color-base-text));
+}
+
+.article-card__excerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(var(--color-base-text), 0.8);
+  margin-top: 0.5rem;
+}
+
+.article-card__footer {
+  font-size: 0.9rem;
+  color: rgba(var(--color-base-text), 0.6);
+  margin-top: 1rem;
+}
+
+/* ----- Versión móvil ----- */
+@media screen and (max-width: 749px) {
+  .articles-wrapper .article {
+    width: 100%;
+  }
+
+  .article-card__content {
+    padding: 1rem;
+  }
+
+  .article-card__title {
+    font-size: 1.1rem;
+  }
+
+  .article-card__excerpt {
+    font-size: 0.95rem;
+  }
+}
+
+/* ----- Versión desktop ----- */
+@media screen and (min-width: 750px) {
+  .articles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .article-card__content {
+    padding: 1.5rem;
+  }
+
+  .article-card__title {
+    font-size: 1.3rem;
+  }
+
+  .article-card__excerpt {
+    font-size: 1rem;
+  }
+}
+
+/* ----- Imágenes con ratio controlado ----- */
+.article-card__image--small .ratio::before {
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.article-card__image--medium .ratio::before {
+  padding-bottom: 75%; /* 4:3 */
+}
+
+.article-card__image--large .ratio::before {
+  padding-bottom: 100%; /* 1:1 */
+}
+
+/* ----- Enlaces sin subrayado visible ----- */
+.article-card__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+/* ----- Sin bordes visibles ----- */
+.article-card .card__information {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* ----- Flexbox gap fallback ----- */
+@supports not (inset: 10px) {
+  .articles-wrapper.grid {
+    margin: 0 0 5rem 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .articles-wrapper.grid {
+      margin-bottom: 7rem;
+    }
+  }
+}

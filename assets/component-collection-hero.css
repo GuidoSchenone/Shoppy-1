@@ -1,0 +1,136 @@
+/* ===========================================================
+   Hero estilo Vithalia (producto o colección)
+   Limpio, centrado, sin bordes visibles
+   =========================================================== */
+
+.collection-hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background-color: rgb(var(--color-base-background-1));
+}
+
+.collection-hero--with-image .collection-hero__inner {
+  background-color: rgba(var(--color-base-accent-2), 0.3);
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .collection-hero.collection-hero--with-image {
+    padding: calc(4rem + var(--page-width-margin)) 0;
+  }
+
+  .collection-hero--with-image .collection-hero__inner {
+    padding: 3rem 2rem;
+  }
+}
+
+.collection-hero__text-wrapper {
+  flex-basis: 100%;
+  max-width: 700px;
+}
+
+.collection-hero__title {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.collection-hero__title + .collection-hero__description {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(var(--color-base-text), 0.8);
+}
+
+@media screen and (min-width: 750px) {
+  .collection-hero__title {
+    font-size: 3rem;
+  }
+
+  .collection-hero__title + .collection-hero__description {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .collection-hero__description {
+    max-width: 100%;
+  }
+}
+
+.collection-hero--with-image .collection-hero__title {
+  margin: 0;
+}
+
+.collection-hero--with-image .collection-hero__text-wrapper {
+  padding: 0;
+}
+
+.collection-hero__image-container {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(var(--color-base-text), 0.08);
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 749px) {
+  .collection-hero__image-container {
+    height: auto;
+    max-height: 240px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .collection-hero--with-image .collection-hero__text-wrapper {
+    padding: 0;
+    flex-basis: 100%;
+  }
+
+  .collection-hero__image-container {
+    align-self: center;
+    flex: 0 0 100%;
+    margin-left: 0;
+    margin-top: 3rem;
+    max-width: 600px;
+  }
+}
+
+/* ----- Botón estilo Vithalia ----- */
+.collection-hero__text-wrapper .button {
+  margin-top: 1.5rem;
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: none;
+  box-shadow: 0 4px 12px rgba(var(--color-base-accent-1), 0.25);
+  transition: all 0.2s ease;
+}
+
+.collection-hero__text-wrapper .button:hover {
+  background-color: rgba(var(--color-base-accent-1), 0.9);
+  box-shadow: 0 6px 20px rgba(var(--color-base-accent-1), 0.35);
+}
+
+/* ----- Imagen opcional ----- */
+.collection-hero__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ----- Sin bordes ni sombra externa ----- */
+.collection-hero__inner {
+  border: none;
+  box-shadow: none;
+}

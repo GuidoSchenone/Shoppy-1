@@ -1,0 +1,40 @@
+/* ====== gem-page-product.js.liquid | Comportamiento adaptado a Vithalia.store ====== */
+
+{% comment %}
+  Variables Liquid para configuración
+{% endcomment %}
+{% assign animation_duration = settings.animation_duration | default: 500 %}
+{% assign animation_delay = settings.animation_delay | default: 0 %}
+{% assign animation_threshold = settings.animation_threshold | default: 0.2 %}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const animateOnScroll = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(animateOnScroll, {
+    threshold: {{ animation_threshold | times: 1.0 }},
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Animación: pulse (infinita)
+  const pulseInfiniteElements = document.querySelectorAll('.animate-pulse-infinite');
+  pulseInfiniteElements.forEach(el => {
+    el.classList.add('animate-pulse');
+    observer.observe(el);
+  });
+
+  // Animación: pulse (una vez)
+  const pulseOnceElements = document.querySelectorAll('.animate-pulse-once');
+  pulseOnceElements.forEach(el => {
+    el.classList.add('animate-pulse-once');
+    el.style.animationDelay = '{{ animation_delay }}ms';
+    el.style.animationDuration = '{{ animation_duration }}ms';
+    observer.observe(el);
+  });
+});

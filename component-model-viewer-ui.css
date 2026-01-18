@@ -1,0 +1,79 @@
+/* ====== component-model-viewer-ui.css | Estilo adaptado a Vithalia.store ====== */
+
+.shopify-model-viewer-ui {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__controls-area {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button {
+  background: transparent;
+  border: none;
+  color: #111;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button:hover {
+  background-color: #f5f5f5;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button:active,
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button.focus-visible:focus {
+  background-color: #e0e0e0;
+  outline: none;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button--control:not(:last-child):after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 0.25rem 0;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.shopify-model-viewer-ui .shopify-model-viewer-ui__poster-control-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #111;
+  stroke-width: 2;
+}

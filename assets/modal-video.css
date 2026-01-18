@@ -1,0 +1,68 @@
+/* ====== component-modal-video.css | Estilo adaptado a Vithalia.store ====== */
+
+.modal-video {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-video[open] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-video__content {
+  background-color: #fff;
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-video__toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-video__toggle .icon {
+  width: 24px;
+  height: 24px;
+  stroke: #111;
+  stroke-width: 2;
+}
+
+.modal-video__video,
+.modal-video__video iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+@media screen and (min-width: 750px) {
+  .modal-video__content {
+    width: 85%;
+  }
+
+  .modal-video__toggle {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}

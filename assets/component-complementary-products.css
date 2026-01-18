@@ -1,0 +1,233 @@
+/* ===========================================================
+   Productos complementarios estilo Vithalia
+   Bloques apilados, limpios, sin slider
+   =========================================================== */
+
+.complementary-products__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+product-recommendations:not(.is-accordion) .complementary-products__container {
+  margin-top: 3rem;
+}
+
+.complementary-products__container > details[open] {
+  padding-bottom: 0;
+}
+
+.complementary-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 0;
+}
+
+.complementary-slide {
+  width: 100%;
+  padding: 0;
+}
+
+.complementary-slide > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.complementary-slide.grid__item {
+  width: 100%;
+  padding: 0;
+}
+
+.complementary-slide .card-wrapper {
+  height: auto;
+}
+
+.complementary-products > .summary__title {
+  display: none;
+}
+
+.complementary-products__container .card--card .card__content,
+.complementary-products__container .card--horizontal .card__information {
+  padding: 1.5rem;
+}
+
+.complementary-products__container .card--horizontal .card__inner {
+  max-width: 100%;
+}
+
+.complementary-slide .card--text .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.complementary-products__container .card--card.card--media > .card__content {
+  margin-top: 0;
+}
+
+.complementary-products-contains-quick-add .underline-links-hover:hover a {
+  text-decoration: none;
+}
+
+.complementary-products-contains-quick-add .card__heading:hover a {
+  text-decoration: underline;
+}
+
+.complementary-products__container .card--card .card__inner .card__media {
+  border-radius: 12px;
+}
+
+.complementary-products__container .card--horizontal .quick-add {
+  margin: 0;
+  max-width: 100%;
+}
+
+.complementary-products__container .quick-add__submit {
+  padding: 0.75rem 1.5rem;
+  min-height: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: rgb(var(--color-base-accent-1));
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 12px rgba(var(--color-base-accent-1), 0.25);
+  transition: all 0.2s ease;
+}
+
+.complementary-products__container .quick-add__submit:hover {
+  background-color: rgba(var(--color-base-accent-1), 0.9);
+  box-shadow: 0 6px 20px rgba(var(--color-base-accent-1), 0.35);
+}
+
+.complementary-products__container .quick-add__submit .icon-plus {
+  width: 1rem;
+}
+
+.complementary-products__container .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+
+.complementary-products .sold-out-message:not(.hidden) + .icon-wrap {
+  display: none;
+}
+
+.complementary-products__container .quick-add__submit:not(.animate-arrow) .icon-wrap {
+  transition: transform var(--duration-short) ease;
+}
+
+.complementary-products__container .quick-add__submit:not(.animate-arrow):hover .icon-wrap {
+  transform: rotate(90deg);
+}
+
+.complementary-products__container .quick-add__submit:after,
+.complementary-products__container .quick-add__submit:hover:after {
+  box-shadow: none;
+}
+
+.complementary-products__container .card--horizontal .quick-add,
+.complementary-products__container .card__badge {
+  justify-self: center;
+}
+
+.product--no-media .complementary-products__container .price {
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+  .complementary-products__container .price--on-sale .price-item--regular {
+    font-size: 1.1rem;
+  }
+}
+
+/* ----- Tarjetas estilo Vithalia ----- */
+.complementary-products__container .card {
+  background-color: rgb(var(--color-base-background-1));
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(var(--color-base-text), 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.complementary-products__container .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(var(--color-base-text), 0.12);
+}
+
+.complementary-products__container .card__media {
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.complementary-products__container .card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.complementary-products__container .card:hover .card__media img {
+  transform: scale(1.03);
+}
+
+.complementary-products__container .card__content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.complementary-products__container .card__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.complementary-products__container .card__heading a {
+  text-decoration: none;
+  color: rgb(var(--color-base-text));
+}
+
+.complementary-products__container .card-information > .price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(var(--color-base-accent-1));
+  margin-top: 0.5rem;
+}
+
+/* ----- Versión móvil ----- */
+@media screen and (max-width: 749px) {
+  .complementary-products__container .card__content {
+    padding: 1rem;
+  }
+
+  .complementary-products__container .card__heading {
+    font-size: 1rem;
+  }
+
+  .complementary-products__container .card-information > .price {
+    font-size: 0.95rem;
+  }
+}
+
+/* ----- Versión desktop ----- */
+@media screen and (min-width: 750px) {
+  .complementary-products__container {
+    gap: 2.5rem;
+  }
+
+  .complementary-products__container .card__content {
+    padding: 1.5rem;
+  }
+
+  .complementary-products__container .card__heading {
+    font-size: 1.15rem;
+  }
+
+  .complementary-products__container .card-information > .price {
+    font-size: 1.05rem;
+  }
+}

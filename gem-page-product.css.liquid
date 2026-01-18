@@ -1,0 +1,91 @@
+/* ====== gem-page-product.css.liquid | Estilo adaptado a Vithalia.store ====== */
+
+{% comment %}
+  Variables Liquid para fácil personalización
+{% endcomment %}
+{% assign color_primary = settings.color_primary | default: '#4f6224' %}
+{% assign color_text = settings.color_text | default: '#111' %}
+{% assign color_bg = settings.color_bg | default: '#fff' %}
+{% assign border_radius = settings.border_radius | default: '50px' %}
+{% assign font_button = settings.font_button | default: 'inherit' %}
+
+.product-page-section {
+  padding: 2rem 0;
+  background: {{ color_bg }};
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.product-image-block,
+.product-content-block {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .product-image-block,
+  .product-content-block {
+    flex: 1 1 48%;
+  }
+}
+
+.product-image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: {{ color_text }};
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.product-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: {{ color_primary }};
+  color: #fff;
+  font-family: {{ font_button }};
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: {{ border_radius }};
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.product-cta-button:hover {
+  background-color: {{ color_primary | color_darken: 10 }};
+}
+
+.product-cta-button.full-width {
+  width: 100%;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-cta-button {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.5rem;
+  }
+}

@@ -1,0 +1,149 @@
+/* ====== component-predictive-search.css | Estilo adaptado a Vithalia.store ====== */
+
+.predictive-search {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  z-index: 10;
+  max-height: 70vh;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+predictive-search[open] .predictive-search,
+predictive-search[loading] .predictive-search {
+  display: block;
+}
+
+.predictive-search__results-groups-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 750px) {
+  .predictive-search__results-groups-wrapper {
+    flex-direction: row;
+  }
+}
+
+.predictive-search__result-group {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.predictive-search__heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 1.5rem 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.predictive-search__item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.predictive-search__item:hover,
+.predictive-search__item[aria-selected="true"] {
+  background-color: #f9f9f9;
+}
+
+.predictive-search__item--link-with-thumbnail {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.predictive-search__image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.predictive-search__item-heading {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.predictive-search__item-vendor {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.predictive-search__item .price {
+  font-size: 0.9rem;
+  color: #111;
+  margin-top: 0.25rem;
+}
+
+.predictive-search__item--term {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.predictive-search__item--term .icon-arrow {
+  width: 16px;
+  height: 16px;
+  stroke: #111;
+  stroke-width: 2;
+  margin-left: 0.5rem;
+}
+
+predictive-search .spinner {
+  width: 20px;
+  height: 20px;
+  margin: 1rem auto;
+}
+
+predictive-search[loading] .predictive-search__loading-state {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+predictive-search[loading] .predictive-search__search-for-button {
+  display: none;
+}
+
+/* ====== Responsive ====== */
+@media screen and (min-width: 750px) {
+  .predictive-search {
+    max-width: 600px;
+    left: 0;
+    right: auto;
+  }
+
+  .predictive-search__heading {
+    margin: 0 2rem 0.5rem;
+  }
+
+  .predictive-search__item {
+    padding: 0.75rem 2rem;
+  }
+}

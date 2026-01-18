@@ -1,0 +1,434 @@
+/* Vithalia-style Blog Post Section CSS
+ * Clean, product-focused blog layout with card-based design
+ */
+
+.blog-post-section {
+  --section-spacing: 4rem;
+  --card-radius: 12px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --border-subtle: 1px solid rgba(var(--color-foreground), 0.08);
+  --text-subtle: rgba(var(--color-foreground), 0.65);
+}
+
+@media screen and (min-width: 750px) {
+  .blog-post-section {
+    --section-spacing: 6rem;
+  }
+}
+
+/* Main container spacing */
+.article-template {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template {
+    padding: 0 3rem;
+  }
+}
+
+/* Hero section with modern card design */
+.article-template__hero-container {
+  margin: 2rem 0 3rem;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: rgb(var(--color-background));
+}
+
+@media screen and (min-width: 990px) {
+  .article-template__hero-container {
+    margin: 3rem 0 4rem;
+  }
+}
+
+/* Hero image sizes with smooth aspect ratios */
+.article-template__hero-small {
+  height: 12rem;
+}
+
+.article-template__hero-medium {
+  height: 24rem;
+}
+
+.article-template__hero-large {
+  height: 36rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__hero-small {
+    height: 20rem;
+  }
+
+  .article-template__hero-medium {
+    height: 40rem;
+  }
+
+  .article-template__hero-large {
+    height: 60rem;
+  }
+}
+
+/* Article header with clean spacing */
+.article-template header {
+  margin: 3rem 0 2rem;
+  padding: 2.5rem;
+  background: rgb(var(--color-background));
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border-subtle);
+}
+
+@media screen and (min-width: 750px) {
+  .article-template header {
+    margin: 4rem 0 3rem;
+    padding: 3.5rem;
+  }
+}
+
+/* Title styling with modern typography */
+.article-template__title {
+  margin: 0 0 1.5rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgb(var(--color-foreground));
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__title {
+    font-size: 3.2rem;
+  }
+}
+
+/* Meta information with subtle styling */
+.article-template__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--text-subtle);
+}
+
+.article-template__author,
+.article-template__date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Back navigation with clean design */
+.article-template__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.article-template__link:hover {
+  background: rgba(var(--color-foreground), 0.1);
+  transform: translateX(-2px);
+}
+
+.article-template__link .icon-wrap {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.article-template__link:hover .icon-wrap {
+  transform: translateX(-4px);
+}
+
+/* Main content with card-based design */
+.article-template__content {
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: rgb(var(--color-background));
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border-subtle);
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__content {
+    margin: 4rem 0;
+    padding: 3.5rem;
+    font-size: 1.7rem;
+  }
+}
+
+/* Content typography improvements */
+.article-template__content h2 {
+  margin: 3rem 0 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.article-template__content h3 {
+  margin: 2.5rem 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.article-template__content p {
+  margin-bottom: 1.8rem;
+}
+
+.article-template__content ul,
+.article-template__content ol {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.article-template__content li {
+  margin-bottom: 0.8rem;
+}
+
+/* Social sharing with modern buttons */
+.article-template__social-sharing {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgb(var(--color-background));
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border-subtle);
+}
+
+.social-sharing__title {
+  margin: 0 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.social-sharing__buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-sharing__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.social-sharing__button:hover {
+  background: rgba(var(--color-foreground), 0.1);
+  transform: translateY(-2px);
+}
+
+/* Comments section with card design */
+.article-template__comment-wrapper {
+  margin: 4rem 0;
+  padding: 2.5rem;
+  background: rgb(var(--color-background));
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border-subtle);
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comment-wrapper {
+    margin: 5rem 0;
+    padding: 3.5rem;
+  }
+}
+
+.article-template__comment-wrapper h2 {
+  margin: 0 0 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Individual comments with clean styling */
+.article-template__comments-comment {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: rgba(var(--color-foreground), 0.02);
+  border-radius: 8px;
+  border: var(--border-subtle);
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comments-comment {
+    padding: 2.5rem;
+  }
+}
+
+.article-template__comments-comment p {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.article-template__comments-comment:last-child {
+  margin-bottom: 0;
+}
+
+/* Comment form with modern inputs */
+.article-template__comment-fields {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .article-template__comment-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.article-template__comment-fields > * {
+  margin-bottom: 2rem;
+}
+
+.article-template__comment-fields input,
+.article-template__comment-fields textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border: var(--border-subtle);
+  border-radius: 8px;
+  background: rgb(var(--color-background));
+  transition: border-color 0.2s ease;
+}
+
+.article-template__comment-fields input:focus,
+.article-template__comment-fields textarea:focus {
+  outline: none;
+  border-color: rgb(var(--color-foreground));
+}
+
+/* Warning message styling */
+.article-template__comment-warning {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(var(--color-foreground), 0.05);
+  border-radius: 8px;
+  border-left: 4px solid rgb(var(--color-foreground));
+  font-size: 1.4rem;
+  color: var(--text-subtle);
+}
+
+/* Pagination with modern design */
+.article-template__comments .pagination-wrapper {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 990px) {
+  .article-template__comments .pagination-wrapper {
+    margin: 4rem 0;
+  }
+}
+
+.pagination__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4rem;
+  height: 4rem;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.pagination__item:hover,
+.pagination__item--current {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 749px) {
+  .article-template {
+    padding: 0 1.5rem;
+  }
+  
+  .article-template header,
+  .article-template__content,
+  .article-template__social-sharing,
+  .article-template__comment-wrapper {
+    padding: 2rem;
+  }
+  
+  .article-template__title {
+    font-size: 2rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .article-template__hero-container,
+  .article-template header,
+  .article-template__content,
+  .article-template__social-sharing,
+  .article-template__comment-wrapper {
+    background: rgba(var(--color-background), 0.95);
+  }
+}
+
+/* Print styles */
+@media print {
+  .article-template__social-sharing,
+  .article-template__comment-wrapper,
+  .article-template__link {
+    display: none;
+  }
+  
+  .article-template__content,
+  .article-template header {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+/* Animation for smooth transitions */
+.article-template__hero-container,
+.article-template header,
+.article-template__content,
+.article-template__social-sharing,
+.article-template__comment-wrapper {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

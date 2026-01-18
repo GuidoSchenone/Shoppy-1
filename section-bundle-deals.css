@@ -1,0 +1,543 @@
+/* Vithalia-style Bundle Deals Section CSS
+ * Clean, conversion-focused bundle deals with card-based design
+ */
+
+.bundle-deals-section {
+  --section-spacing: 4rem;
+  --card-radius: 16px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --border-subtle: 1px solid rgba(var(--color-foreground), 0.08);
+  --text-subtle: rgba(var(--color-foreground), 0.65);
+  --accent-color: 59, 130, 246; /* Blue accent like Vithalia */
+  --success-color: 34, 197, 94;
+  --discount-badge: #ef4444;
+}
+
+@media screen and (min-width: 750px) {
+  .bundle-deals-section {
+    --section-spacing: 6rem;
+  }
+}
+
+/* Main container with clean spacing */
+.page-width .title-wrapper-with-link.main-title-with-text {
+  margin-bottom: 1rem;
+}
+
+.text-under-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  color: var(--text-subtle);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-under-title p:first-child {
+  margin-top: 0;
+}
+
+/* Bundle deals container with modern card */
+.bundle-deals {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgb(var(--color-background));
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border-subtle);
+  --checkbox-size: 2rem;
+  --checkbox-margin: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  .bundle-deals {
+    padding: 4rem;
+  }
+}
+
+/* Media grid with modern styling */
+.bundle-deals__media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(var(--color-foreground), 0.02);
+  border-radius: 12px;
+  border: var(--border-subtle);
+}
+
+@media screen and (min-width: 750px) {
+  .bundle-deals__media {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    padding: 3rem;
+  }
+}
+
+/* Individual media items with hover effects */
+.bundle-deals__media-item {
+  display: block;
+  cursor: pointer;
+  max-width: 25rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bundle-deals__media-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.bundle-deals__media-item:not(:first-child)::before {
+  content: "+";
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  transform: translate(-50%, -50%);
+  font-size: 2.4rem;
+  color: rgb(var(--accent-color));
+  background: rgb(var(--color-background));
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+@media screen and (min-width: 750px) {
+  .bundle-deals__media-item:not(:first-child)::before {
+    left: -2rem;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.bundle-deals__media-item img,
+.bundle-deals__media-item svg {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.bundle-deals__media-item--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.bundle-deals__media-item--disabled img {
+  filter: grayscale(1);
+}
+
+/* Product selection with modern checkboxes */
+.bundle-deals__form {
+  margin-bottom: 2rem;
+}
+
+.bundle-deals__product {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(var(--color-foreground), 0.02);
+  border-radius: 12px;
+  border: var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.bundle-deals__product:hover {
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.bundle-deals__product--selected {
+  background: rgba(var(--accent-color), 0.05);
+  border-color: rgba(var(--accent-color), 0.2);
+}
+
+.bundle-deals__product--deselected {
+  opacity: 0.7;
+}
+
+/* Modern checkbox design */
+.bundle-deals__checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bundle-deals__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.bundle-deals__checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+  padding: 0.5rem 0;
+}
+
+.bundle-deals__checkbox-custom {
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  margin-right: var(--checkbox-margin);
+  border: 2px solid rgba(var(--color-foreground), 0.2);
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.bundle-deals__checkbox:checked + .bundle-deals__checkbox-label .bundle-deals__checkbox-custom {
+  background: rgb(var(--accent-color));
+  border-color: rgb(var(--accent-color));
+}
+
+.bundle-deals__checkbox-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 60%;
+  height: 60%;
+  background: white;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transition: transform 0.2s ease;
+}
+
+.bundle-deals__checkbox:checked + .bundle-deals__checkbox-label .bundle-deals__checkbox-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.bundle-deals__checkbox-label svg {
+  display: none; /* Hide default SVG, using custom checkbox */
+}
+
+/* Product title with dynamic styling */
+.bundle-deals__title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+  line-height: 1.3;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 750px) {
+  .bundle-deals__title {
+    font-size: 1.9rem;
+  }
+}
+
+.bundle-deals__checkbox:not(:checked) + .bundle-deals__checkbox-label .bundle-deals__title {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+/* Price display with discount emphasis */
+.bundle-deals__prices {
+  flex-shrink: 0;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.bundle-deals__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(var(--color-foreground));
+}
+
+.bundle-deals__compare-price {
+  font-size: 1.4rem;
+  color: var(--text-subtle);
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.bundle-deals__savings {
+  font-size: 1.3rem;
+  color: rgb(var(--success-color));
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+/* Variant selects with modern styling */
+.bundle-deals__variant-selects {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-left: calc(var(--checkbox-size) + var(--checkbox-margin));
+}
+
+.bundle-deals__variant-selects .select {
+  position: relative;
+  min-width: 120px;
+}
+
+.bundle-deals__variant-selects .select__select {
+  width: 100%;
+  padding: 0.8rem 3rem 0.8rem 1rem;
+  font-size: 1.4rem;
+  border: var(--border-subtle);
+  border-radius: 8px;
+  background: rgb(var(--color-background));
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bundle-deals__variant-selects .select__select:focus {
+  outline: none;
+  border-color: rgb(var(--accent-color));
+  box-shadow: 0 0 0 3px rgba(var(--accent-color), 0.1);
+}
+
+.bundle-deals__product--deselected .bundle-deals__variant-selects {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Total price with prominent display */
+.bundle-deals__total-price-container {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: rgb(var(--color-foreground));
+  margin: 2rem 0 1rem;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(var(--color-foreground), 0.02);
+  border-radius: 12px;
+  border: var(--border-subtle);
+}
+
+.bundle-deals__total-price {
+  color: rgb(var(--accent-color));
+  font-size: 2.6rem;
+}
+
+.bundle-deals__total-savings {
+  font-size: 1.6rem;
+  color: rgb(var(--success-color));
+  margin-top: 0.5rem;
+}
+
+/* CTA button with modern design */
+.bundle-deals__center {
+  padding: 1rem 0 2rem;
+}
+
+.bundle-deals__button {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.bundle-deals__button .button {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: rgb(var(--accent-color));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(var(--accent-color), 0.3);
+}
+
+.bundle-deals__button .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(var(--accent-color), 0.4);
+}
+
+.bundle-deals__button .button:active {
+  transform: translateY(0);
+}
+
+/* Trust badges and urgency elements */
+.bundle-deals__trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.bundle-deals__trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--text-subtle);
+  padding: 0.8rem 1.2rem;
+  background: rgba(var(--color-foreground), 0.05);
+  border-radius: 8px;
+}
+
+.bundle-deals__urgency {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(var(--discount-badge), 0.1);
+  border-radius: 8px;
+  color: var(--discount-badge);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+/* Responsive improvements */
+@media screen and (min-width: 1000px) {
+  .bundle-deals {
+    --checkbox-size: 2.2rem;
+    --checkbox-margin: 1.2rem;
+  }
+
+  .bundle-deals-horizontal-images-left,
+  .bundle-deals-horizontal-images-right {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .bundle-deals-horizontal-images-left .bundle-deals__media {
+    margin-right: 0;
+  }
+
+  .bundle-deals-horizontal-images-right .bundle-deals__media {
+    margin-left: 0;
+  }
+
+  .bundle-deals-horizontal-images-left .bundle-deals__center,
+  .bundle-deals-horizontal-images-left .bundle-deals__button,
+  .bundle-deals-horizontal-images-right .bundle-deals__button,
+  .bundle-deals-horizontal-images-right .bundle-deals__center {
+    margin: 0;
+  }
+
+  .bundle-deals__title,
+  .bundle-deals__price,
+  .bundle-deals__compare-price {
+    font-size: 2.1rem;
+  }
+
+  .bundle-deals__total-price-container {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 749px) {
+  .bundle-deals {
+    padding: 2rem;
+  }
+
+  .bundle-deals__media {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .bundle-deals__media-item:not(:first-child)::before {
+    left: -1.2rem;
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .bundle-deals__product {
+    padding: 1.2rem;
+  }
+
+  .bundle-deals__title {
+    font-size: 1.5rem;
+  }
+
+  .bundle-deals__price {
+    font-size: 1.6rem;
+  }
+
+  .bundle-deals__total-price-container {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+  }
+
+  .bundle-deals__button .button {
+    font-size: 1.6rem;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .bundle-deals {
+    background: rgba(var(--color-background), 0.95);
+  }
+
+  .bundle-deals__product {
+    background: rgba(var(--color-foreground), 0.05);
+  }
+
+  .bundle-deals__checkbox-custom {
+    border-color: rgba(var(--color-foreground), 0.3);
+  }
+}
+
+/* Animation for smooth interactions */
+.bundle-deals__product,
+.bundle-deals__media-item,
+.bundle-deals__button .button {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state */
+.bundle-deals__button .button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.bundle-deals__button .button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

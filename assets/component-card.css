@@ -1,0 +1,199 @@
+/* ===========================================================
+   Card adaptado al estilo Vithalia
+   Tarjetas limpias, modernas, sin bordes visibles
+   =========================================================== */
+
+.card-wrapper {
+  color: inherit;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  display: block;
+}
+
+.card {
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(var(--color-base-background-1));
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(var(--color-base-text), 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(var(--color-base-text), 0.12);
+}
+
+.card--horizontal {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.card--card,
+.card--standard .card__inner {
+  border: none;
+  border-radius: 16px;
+  background-color: transparent;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card--card:after,
+.card--standard .card__inner:after {
+  display: none;
+}
+
+.card__media {
+  margin: 0;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__media img {
+  transform: scale(1.03);
+}
+
+.card__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.card__information {
+  text-align: center;
+  padding: 0;
+}
+
+.card__heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.card__heading a {
+  text-decoration: none;
+  color: rgb(var(--color-base-text));
+}
+
+.card__caption {
+  font-size: 0.95rem;
+  color: rgba(var(--color-base-text), 0.7);
+  margin-top: 0.25rem;
+}
+
+.card-information > .price {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(var(--color-base-accent-1));
+}
+
+.card--horizontal .card-information > .price {
+  color: rgba(var(--color-base-text), 0.9);
+}
+
+.card__badge {
+  display: none;
+}
+
+.card .icon-wrap {
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .icon-wrap {
+  transform: translateX(4px);
+}
+
+/* ----- Versión móvil ----- */
+@media screen and (max-width: 749px) {
+  .card__content {
+    padding: 1rem;
+  }
+
+  .card__heading {
+    font-size: 1.1rem;
+  }
+
+  .card__caption {
+    font-size: 0.9rem;
+  }
+
+  .card-information > .price {
+    font-size: 1rem;
+  }
+}
+
+/* ----- Versión desktop ----- */
+@media screen and (min-width: 750px) {
+  .card__content {
+    padding: 1.5rem;
+  }
+
+  .card__heading {
+    font-size: 1.3rem;
+  }
+
+  .card__caption {
+    font-size: 1rem;
+  }
+
+  .card-information > .price {
+    font-size: 1.15rem;
+  }
+}
+
+/* ----- Hover suave ----- */
+.card__heading a::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.card__heading a:focus-visible {
+  outline: 2px solid rgb(var(--color-base-accent-1));
+  outline-offset: 4px;
+}
+
+/* ----- Sin bordes, sin sombra externa ----- */
+.card--standard > .card__content {
+  padding: 0;
+}
+
+.card--extend-height {
+  height: 100%;
+}
+
+.card-information > * + * {
+  margin-top: 0.5rem;
+}
+
+.card-information .caption {
+  letter-spacing: 0.05rem;
+  font-size: 0.9rem;
+  color: rgba(var(--color-base-text), 0.6);
+}

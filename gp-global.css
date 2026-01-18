@@ -1,0 +1,221 @@
+/* ====== gp-global.css | Estilo adaptado a Vithalia.store ====== */
+
+/* === RESET BASE === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body, ui-sans-serif, system-ui, sans-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text, #111);
+  background-color: var(--color-bg, #fff);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* === VARIABLES CSS CONTROLADAS POR LIQUID === */
+:root {
+  --g-ct-w: 1200px;
+  --g-ct-p: 1rem;
+  --color-primary: #4f6224;
+  --color-text: #111;
+  --color-bg: #fff;
+  --color-border: #e5e5e5;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* === UTILIDADES LIMPIAS === */
+.wrapper {
+  max-width: var(--g-ct-w);
+  margin: 0 auto;
+  padding-left: var(--g-ct-p);
+  padding-right: var(--g-ct-p);
+}
+
+.gpsil > section {
+  transition: opacity 0.5s;
+}
+
+.gps .gp-text ul > li,
+.gps .gp-text ol > li {
+  margin-left: 1.5rem;
+}
+
+.gps .gp-text ul > li {
+  list-style: disc;
+}
+
+.gps .gp-text ol > li {
+  list-style: decimal;
+}
+
+/* === RESPONSIVE UTILITIES === */
+@media (max-width: 1023px) {
+  :root {
+    --g-ct-p: 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --g-ct-p: 0.5rem;
+  }
+}
+
+/* === SAFE AREA INSETS === */
+.p-safe {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.h-safe {
+  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+
+/* === LAYOUT FLEX & GRID === */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* === SPACING === */
+.p-4 {
+  padding: 1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* === BORDERS === */
+.border {
+  border: 1px solid var(--color-border);
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+
+/* === SHADOWS === */
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+/* === TEXT === */
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #3b4a1b;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* === RESPONSIVE HELPERS === */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}

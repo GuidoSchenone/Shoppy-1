@@ -1,0 +1,457 @@
+/* Vithalia-style Content Tabs Section CSS
+ * Clean, conversion-focused tabs with card-based design
+ */
+
+.content-tabs-section {
+  --section-spacing: 4rem;
+  --card-radius: 16px;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --border-subtle: 1px solid rgba(var(--color-foreground), 0.08);
+  --text-subtle: rgba(var(--color-foreground), 0.65);
+  --accent-color: 59, 130, 246; /* Blue accent like Vithalia */
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 750px) {
+  .content-tabs-section {
+    --section-spacing: 6rem;
+  }
+}
+
+/* Main container with clean spacing */
+.content-tabs__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .content-tabs__header--horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+/* Heading with modern typography */
+.content-tabs__heading {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: rgb(var(--color-foreground));
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+  .content-tabs__header--horizontal .content-tabs__heading {
+    margin-bottom: 0;
+    text-align: left;
+    flex: 1;
+  }
+}
+
+/* Tab buttons with modern design */
+.content-tabs__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-shrink: 0;
+  background: none;
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .content-tab-buttons--desktop-expand .content-tabs__buttons {
+    width: 100%;
+  }
+  
+  .content-tab-buttons--desktop-expand .content-tab-button {
+    flex-grow: 1;
+  }
+}
+
+/* Outlined button style - clean and modern */
+.content-tabs__buttons--outlined {
+  --padding: 0.8rem;
+  padding: var(--padding);
+  background: rgba(var(--color-foreground), 0.02);
+  border: var(--border-subtle);
+  border-radius: 12px;
+}
+
+/* Shadow button style - subtle elevation */
+.content-tabs__buttons--shadow {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 0.5rem;
+  background: rgb(var(--color-background));
+}
+
+/* Individual tab buttons */
+.content-tab-button {
+  font-size: 1.6rem;
+  padding: 1.2rem 2rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+  color: var(--text-subtle);
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s var(--transition-smooth);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-tab-button:hover {
+  color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.05);
+  transform: translateY(-2px);
+}
+
+.content-tab-button--active {
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-tabs__buttons--animation-opacity .content-tab-button--active {
+  background: rgb(var(--color-background));
+  transition-delay: 0.1s;
+}
+
+/* Icon support */
+.content-tab-button .material-icon + span {
+  margin-left: 0.5rem;
+}
+
+/* Active background animation - smooth sliding */
+.content-tab-buttom__active-bg {
+  position: absolute;
+  z-index: 0;
+  width: 0;
+  background: rgb(var(--color-background));
+  border-radius: 8px;
+  transition: all 0.4s var(--transition-smooth);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-tabs__buttons--animation-moving .content-tab-button {
+  transition-duration: 0.4s;
+  transition-delay: 0s;
+  z-index: 1;
+}
+
+/* Tabs container with card design */
+.content-tabs__tabs {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: height 0.4s var(--transition-smooth);
+  margin-top: 3rem;
+  border-radius: var(--card-radius);
+  background: rgb(var(--color-background));
+  box-shadow: var(--card-shadow);
+  border: var(--border-subtle);
+}
+
+@media screen and (max-width: 749px) {
+  .content-tabs__tabs {
+    margin-top: 2rem;
+  }
+}
+
+/* Individual tab content */
+.content-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s var(--transition-smooth);
+  z-index: -1;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.content-tab--active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  z-index: 0;
+  transition-delay: 0.2s;
+}
+
+/* Media and content areas */
+.content-tab__media,
+.content-tab__content {
+  width: 100%;
+}
+
+.content-tab__media {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(var(--color-foreground), 0.02);
+}
+
+.content-tab__media img,
+.content-tab__media video {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  transition: transform 0.3s ease;
+}
+
+.content-tab__media:hover img,
+.content-tab__media:hover video {
+  transform: scale(1.02);
+}
+
+/* Content styling */
+.content-tab__content {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgb(var(--color-foreground));
+}
+
+.content-tab__content h3 {
+  margin: 0 0 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: rgb(var(--color-foreground));
+}
+
+.content-tab__content p {
+  margin-bottom: 1.8rem;
+}
+
+.content-tab__content ul,
+.content-tab__content ol {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.content-tab__content li {
+  margin-bottom: 0.8rem;
+}
+
+/* Two column layout for desktop */
+@media screen and (min-width: 750px) {
+  .content-tab--2-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    column-gap: 4rem;
+    row-gap: 0;
+  }
+  
+  .content-tab--2-column .content-tab__media {
+    order: 1;
+  }
+  
+  .content-tab--2-column .content-tab__content {
+    order: 2;
+  }
+  
+  .content-tab--2-column.content-tab--media-right .content-tab__media {
+    order: 2;
+  }
+  
+  .content-tab--2-column.content-tab--media-right .content-tab__content {
+    order: 1;
+  }
+}
+
+/* Mobile responsive improvements */
+@media screen and (max-width: 749px) {
+  .content-tabs__buttons--outlined {
+    --padding: 0.6rem;
+  }
+  
+  .content-tab-buttons--mobile-expand .content-tabs__buttons {
+    width: 100%;
+  }
+  
+  .content-tab-buttons--mobile-expand .content-tab-button {
+    flex-grow: 1;
+    min-width: 120px;
+  }
+  
+  .content-tab {
+    padding: 2rem;
+    row-gap: 2rem;
+  }
+  
+  .content-tab__content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Alternative tab styles */
+.content-tabs__buttons--pills .content-tab-button {
+  border-radius: 50px;
+}
+
+.content-tabs__buttons--minimal .content-tab-button {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  padding: 1.2rem 1.5rem;
+}
+
+.content-tabs__buttons--minimal .content-tab-button--active {
+  border-bottom-color: rgb(var(--accent-color));
+  box-shadow: none;
+}
+
+/* Icon tabs */
+.content-tabs__buttons--icons .content-tab-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  min-width: 100px;
+}
+
+.content-tabs__buttons--icons .material-icon {
+  font-size: 2.4rem;
+}
+
+/* Vertical tabs for desktop */
+@media screen and (min-width: 990px) {
+  .content-tabs--vertical {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+  }
+  
+  .content-tabs--vertical .content-tabs__buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .content-tabs--vertical .content-tab-button {
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  
+  .content-tabs--vertical .content-tabs__tabs {
+    margin-top: 0;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .content-tabs__tabs {
+    background: rgba(var(--color-background), 0.95);
+  }
+  
+  .content-tabs__buttons--outlined {
+    background: rgba(var(--color-foreground), 0.05);
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-tab--active {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Focus styles for accessibility */
+.content-tab-button:focus-visible {
+  outline: 2px solid rgb(var(--accent-color));
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .content-tabs__buttons {
+    display: none;
+  }
+  
+  .content-tab {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+    margin-bottom: 2rem;
+    break-inside: avoid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .content-tab-button,
+  .content-tab,
+  .content-tab-buttom__active-bg,
+  .content-tabs__tabs {
+    transition: none;
+  }
+  
+  .content-tab--active {
+    animation: none;
+  }
+}
+
+/* Trust indicator badges */
+.content-tab__trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: rgba(var(--accent-color), 0.1);
+  color: rgb(var(--accent-color));
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.content-tab__trust-badge .material-icon {
+  font-size: 1.6rem;
+}
+
+/* CTA button within tab content */
+.content-tab__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem 2rem;
+  background: rgb(var(--accent-color));
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.content-tab__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--accent-color), 0.3);
+}

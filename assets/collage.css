@@ -1,0 +1,145 @@
+/* ===========================================================
+   Collage adaptado al estilo Vithalia
+   Sección de bloques apilados tipo "beneficios" o "pasos"
+   =========================================================== */
+
+.collage-wrapper-title {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(var(--color-base-text));
+}
+
+.collage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.collage__item {
+  background-color: rgb(var(--color-base-background-1));
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(var(--color-base-text), 0.08);
+  overflow: hidden;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collage__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(var(--color-base-text), 0.12);
+}
+
+.collage__item .media img,
+.collage__item .deferred-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.collage__item .card__content {
+  padding-top: 1rem;
+  text-align: left;
+}
+
+.collage__item .card__heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.collage__item .card__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(var(--color-base-text), 0.8);
+}
+
+/* ----- Versión móvil ----- */
+@media screen and (max-width: 749px) {
+  .collage {
+    gap: 1.5rem;
+  }
+
+  .collage__item {
+    padding: 1rem;
+  }
+
+  .collage__item .card__heading {
+    font-size: 1.1rem;
+  }
+
+  .collage__item .card__text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ----- Versión desktop ----- */
+@media screen and (min-width: 750px) {
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+
+  .collage__item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .collage__item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .collage__item .media {
+    flex: 0 0 40%;
+  }
+
+  .collage__item .card__content {
+    flex: 1;
+    padding-top: 0;
+  }
+}
+
+/* ----- Tarjeta interna (sin bordes visibles) ----- */
+.collage-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+.collage-card:after {
+  display: none;
+}
+
+.collage-card .media {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.collage-card .deferred-media {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.collage-card__link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.collage-card .deferred-media__poster {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.collage-card .deferred-media__poster:focus-visible {
+  outline: 2px solid rgb(var(--color-base-accent-1));
+  outline-offset: 4px;
+}
