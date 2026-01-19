@@ -1,0 +1,487 @@
+{
+  "current": {
+   
+    "animations_type": "fade-in-up",
+    "disable_inspect": false,
+    "country_list_function": "block",
+    "country_list": "",
+    
+    
+    "logo": "shopify://shop_images/premium-brand-logo.png",
+    "logo_width": 180,
+    "mobile_logo_width": 150,
+    
+ 
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#8b5a3c",        
+    "gradient_accent_1": "linear-gradient(135deg, #8b5a3c 0%, #a67c52 100%)",
+    "colors_accent_2": "#d4a574",       
+    "gradient_accent_2": "linear-gradient(54deg, #d4a574 14%, #c19260 85%)",
+    "colors_text": "#2c3e50",          
+    "colors_outline_button_labels": "#8b5a3c",
+    "colors_background_1": "#ffffff",   
+    "gradient_background_1": "",
+    "colors_background_2": "#f8f6f3",   
+    "gradient_background_2": "linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%)",
+    
+   
+    "type_header_font": "playfair_display_n7",      
+    "heading_scale": 120,                           
+    "type_body_font": "inter_n4",                  
+    "body_scale": 100,
+    
+    "enable_load_animations": true,
+    "repeat_section_animations": false,
+    "section_animation_type": "fade-up",
+    
+  
+    "badge_position": "top-right",
+    "badge_corner_radius": 8,
+    "sale_badge_color_scheme": "accent-2",
+    "sale_badge_text": "AHORRA [amount]",
+    "sold_out_badge_color_scheme": "inverse",
+    
+ 
+    "page_width": 1400,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 32,
+    "spacing_grid_vertical": 32,
+    
+   
+    "action_btn_hover": "center",
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 12,                   
+    "buttons_shadow_opacity": 5,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 15,
+    
+   
+    "variant_pills_accent_color": "text",
+    "variant_pills_bold_text": false,
+    "variant_pills_border_thickness": 2,
+    "variant_pills_border_opacity": 40,
+    "variant_pills_radius": 20,
+    "variant_pills_shadow_opacity": 0,
+    
+    
+    "pickers_border_color": "accent-1",
+    "pickers_text_color": "text",
+    "pickers_overlay_color": "accent-1",
+    "pickers_overlay_opacity": 8,
+    "pickers_border_thickness": 2,
+    "pickers_border_opacity": 30,
+    "pickers_radius": 10,
+    "pickers_hover_overlay_opacity": 15,
+    "pickers_hover_border_opacity": 60,
+    
+  
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 50,
+    "inputs_radius": 10,
+    "inputs_shadow_opacity": 0,
+    
+  
+    "card_style": "card",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",          
+    "card_color_scheme": "background-1",
+    "card_border_thickness": 0,
+    "card_border_opacity": 0,
+    "card_corner_radius": 16,                
+    "card_shadow_opacity": 8,
+    "card_shadow_horizontal_offset": 2,
+    "card_shadow_vertical_offset": 8,
+    "card_shadow_blur": 20,
+    
+
+    "collection_card_style": "card",
+    "collection_card_image_padding": 0,
+    "collection_card_text_alignment": "left",
+    "collection_card_color_scheme": "background-1",
+    "collection_card_border_thickness": 0,
+    "collection_card_border_opacity": 0,
+    "collection_card_corner_radius": 16,
+    "collection_card_shadow_opacity": 6,
+    "collection_card_shadow_horizontal_offset": 2,
+    "collection_card_shadow_vertical_offset": 8,
+    "collection_card_shadow_blur": 20,
+    
+    "blog_card_style": "card",
+    "blog_card_image_padding": 0,
+    "blog_card_text_alignment": "left",
+    "blog_card_color_scheme": "background-1",
+    "blog_card_border_thickness": 0,
+    "blog_card_border_opacity": 0,
+    "blog_card_corner_radius": 16,
+    "blog_card_shadow_opacity": 6,
+    "blog_card_shadow_horizontal_offset": 4,
+    "blog_card_shadow_vertical_offset": 12,
+    "blog_card_shadow_blur": 30,
+    
+    
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 0,
+    "text_boxes_radius": 24,
+    "text_boxes_shadow_opacity": 0,
+    
+   
+    "media_border_thickness": 0,
+    "media_border_opacity": 0,
+    "media_radius": 16,
+    "media_shadow_opacity": 0,
+    
+   
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 15,
+    "popup_corner_radius": 24,
+    "popup_shadow_opacity": 15,
+    "popup_shadow_horizontal_offset": 4,
+    "popup_shadow_vertical_offset": 16,
+    "popup_shadow_blur": 30,
+    
+  
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 5,
+    "drawer_shadow_horizontal_offset": 4,
+    "drawer_shadow_vertical_offset": 8,
+    "drawer_shadow_blur": 20,
+    
+   
+    "brand_headline": "Bienestar Natural de Alta Gama",
+    "brand_description": "<p>Descubre nuestra colección premium de productos naturales diseñados para mejorar tu bienestar y estilo de vida.</p>",
+    "brand_image_width": 120,
+    
+
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "social_youtube_link": "",
+    "social_tiktok_link": "",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    
+    
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": true,
+    "currency_code_enabled": false,
+    "scrollbar_style": "thin",
+    "scrollbar_thumb_color": "#d4a574",
+    "scrollbar_width": 8,
+    
+ 
+    "cart_type": "drawer",
+    "cart_icon": "bag_minimal",
+    "show_vendor": false,
+    "show_cart_note": true,
+    "cart_drawer_collection": "",
+    "show_cart_payment_badges": true,
+    "cart_trust_badges_width": 120,
+    "enable_cart_discount": true,
+    "enable_cart_timer": true,
+    "cart_timer_text": "<strong>Carro reservado por [timer] minutos más</strong>",
+    "enable_cart_progress_bar": true,
+    "cart_progress_message": "Gasta [amount] más para obtener envío GRATIS",
+    "cart_progress_success_message": "¡Felicidades! Obtienes envío GRATIS 🎉",
+    "cart_progress_icon": "local_shipping",
+    
+ 
+    "enable_cart_upsell_1": true,
+    "cart_upsell_1_product": "colageno-premium",
+    "cart_upsell_1_btn_label": "Agregar",
+    "enable_cart_upsell_2": false,
+    "cart_upsell_2_product": "",
+    "cart_upsell_2_btn_label": "Agregar",
+    
+ 
+    "checkout_accent_color": "#8b5a3c",
+    "checkout_button_color": "#d4a574",
+    
+    
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "promo-popup": {
+        "type": "promo-popup",
+        "settings": {
+          "mode": "timed",
+          "popup_seconds": 8,
+          "popup_days": 30,
+          "display_timer": true,
+          "timer_duration": 5,
+          "layout": "image_first",
+          "color_scheme": "accent-1",
+          "heading_prefix": "Suscríbete y",
+          "heading": "OBTÉN 15% DE DESCUENTO",
+          "heading_size": "h2",
+          "heading_suffix": "",
+          "text": "<p>Suscríbete a nuestro newsletter para recibir descuentos exclusivos y ofertas especiales.</p>",
+          "button_label": "Suscribirse",
+          "dismiss_btn_label": "No gracias",
+          "discount_code": "BIENVENIDA15",
+          "success_heading_prefix": "¡Disfruta tu",
+          "success_heading": "DESCUENTO!",
+          "success_heading_size": "h2",
+          "success_heading_suffix": "",
+          "success_text": "<p>Usa el código de abajo para obtener 15% de descuento en tu pedido completo.</p>",
+          "discount_code_label": "Código de descuento:",
+          "copy_button_label": "Copiar",
+          "copy_message": "¡Código copiado exitosamente!",
+          "success_dismiss_btn_label": "Cerrar",
+          "success_display_image": true
+        }
+      },
+      "scroll-to-top-btn": {
+        "type": "scroll-to-top-btn",
+        "settings": {
+          "enable_scroll_btn": true,
+          "display_after": 400,
+          "color_scheme": "accent-2",
+          "position": "bottom-right",
+          "offset_x": 20,
+          "offset_y": 20
+        }
+      },
+      "global-music-player": {
+        "type": "global-music-player",
+        "settings": {
+          "enabled": false,
+          "audio_src": "",
+          "volume": 10,
+          "position": "bottom-left",
+          "offset_x": 20,
+          "offset_y": 20,
+          "btn_animation": false,
+          "color_scheme": "accent-1"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "sticky_header_type": "always",
+          "show_line_separator": true,
+          "color_scheme": "background-1",
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "highlight_active_link": true,
+          "highlighted_link_color_scheme": "accent-1",
+          "products_mega_menu_links": "Collections",
+          "products_mega_menu_display_collection_products": true,
+          "products_mega_menu_display_collection_images": true,
+          "products_mega_menu_display_collection_images_on_mobile": false,
+          "mobile_menu_title": "Menú",
+          "secondary_menu": "footer",
+          "menu_color_scheme": "background-1",
+          "mobile_logo_position": "center",
+          "display_search": true,
+          "margin_bottom": 0,
+          "padding_top": 24,
+          "padding_bottom": 24
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "brand_logo": {
+            "type": "image",
+            "settings": {
+              "image_width": 120,
+              "alignment": "left",
+              "url": "",
+              "width_desktop": 3,
+              "width_mobile": "2"
+            }
+          },
+          "footer_menu": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Enlaces rápidos",
+              "menu": "footer",
+              "width_desktop": 3,
+              "width_mobile": "2"
+            }
+          },
+          "customer_service": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Atención al cliente",
+              "menu": "customer-service",
+              "width_desktop": 3,
+              "width_mobile": "2"
+            }
+          },
+          "newsletter": {
+            "type": "email_signup",
+            "settings": {
+              "heading": "Suscríbete a nuestro newsletter",
+              "subtext": "<p>Recibe ofertas exclusivas y consejos de bienestar directamente en tu bandeja de entrada.</p>",
+              "button_type": "solid",
+              "button_label": "Suscribirse",
+              "button_style_secondary": false,
+              "width_desktop": 3,
+              "width_mobile": "2"
+            }
+          }
+        },
+        "block_order": [
+          "brand_logo",
+          "footer_menu",
+          "customer_service",
+          "newsletter"
+        ],
+        "settings": {
+          "color_scheme": "background-2",
+          "enable_follow_on_shop": false,
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "enabled_payment_types": "visa,mastercard,amex,paypal",
+          "show_policy": true,
+          "branding_text": "© 2024 Premium Wellness. Todos los derechos reservados.",
+          "margin_top": 0,
+          "padding_top": 48,
+          "padding_bottom": 24
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Premium Minimalista": {
+      "logo_width": 150,
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#8b5a3c",
+      "gradient_accent_1": "linear-gradient(135deg, #8b5a3c 0%, #a67c52 100%)",
+      "colors_accent_2": "#d4a574",
+      "gradient_accent_2": "linear-gradient(54deg, #d4a574 14%, #c19260 85%)",
+      "colors_text": "#2c3e50",
+      "colors_outline_button_labels": "#8b5a3c",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f8f6f3",
+      "gradient_background_2": "linear-gradient(135deg, #f8f6f3 0%, #ffffff 100%)",
+      "type_header_font": "playfair_display_n7",
+      "heading_scale": 120,
+      "type_body_font": "inter_n4",
+      "body_scale": 100,
+      "page_width": 1400,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 32,
+      "spacing_grid_vertical": 32,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 12,
+      "buttons_shadow_opacity": 5,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 15,
+      "variant_pills_border_thickness": 2,
+      "variant_pills_border_opacity": 40,
+      "variant_pills_radius": 20,
+      "variant_pills_shadow_opacity": 0,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 50,
+      "inputs_radius": 10,
+      "inputs_shadow_opacity": 0,
+      "card_style": "card",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-1",
+      "card_border_thickness": 0,
+      "card_border_opacity": 0,
+      "card_corner_radius": 16,
+      "card_shadow_opacity": 8,
+      "card_shadow_horizontal_offset": 2,
+      "card_shadow_vertical_offset": 8,
+      "card_shadow_blur": 20,
+      "collection_card_style": "card",
+      "collection_card_image_padding": 0,
+      "collection_card_text_alignment": "left",
+      "collection_card_color_scheme": "background-1",
+      "collection_card_border_thickness": 0,
+      "collection_card_border_opacity": 0,
+      "collection_card_corner_radius": 16,
+      "collection_card_shadow_opacity": 6,
+      "collection_card_shadow_horizontal_offset": 2,
+      "collection_card_shadow_vertical_offset": 8,
+      "collection_card_shadow_blur": 20,
+      "blog_card_style": "card",
+      "blog_card_image_padding": 0,
+      "blog_card_text_alignment": "left",
+      "blog_card_color_scheme": "background-1",
+      "blog_card_border_thickness": 0,
+      "blog_card_border_opacity": 0,
+      "blog_card_corner_radius": 16,
+      "blog_card_shadow_opacity": 6,
+      "blog_card_shadow_horizontal_offset": 4,
+      "blog_card_shadow_vertical_offset": 12,
+      "blog_card_shadow_blur": 30,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 0,
+      "text_boxes_radius": 24,
+      "text_boxes_shadow_opacity": 0,
+      "media_border_thickness": 0,
+      "media_border_opacity": 0,
+      "media_radius": 16,
+      "media_shadow_opacity": 0,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 15,
+      "popup_corner_radius": 24,
+      "popup_shadow_opacity": 15,
+      "popup_shadow_horizontal_offset": 4,
+      "popup_shadow_vertical_offset": 16,
+      "popup_shadow_blur": 30,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 5,
+      "drawer_shadow_horizontal_offset": 4,
+      "drawer_shadow_vertical_offset": 8,
+      "drawer_shadow_blur": 20,
+      "badge_position": "top-right",
+      "badge_corner_radius": 8,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "brand_headline": "Bienestar Natural Premium",
+      "brand_description": "<p>Descubre nuestra colección curada de productos naturales de la más alta calidad.</p>",
+      "brand_image_width": "120",
+      "social_instagram_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": true,
+      "currency_code_enabled": false,
+      "cart_type": "drawer",
+      "show_vendor": false,
+      "show_cart_note": true,
+      "sections": {
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {
+            "color_scheme": "background-1"
+          }
+        }
+      }
+    }
+  }
+}
